@@ -1,4 +1,4 @@
-
+ALTER USER STAFF_MIKE IDENTIFIED BY Mike2026x ACCOUNT UNLOCK;
 -- Role des caissiers : operations quotidiennes au comptoir
 CREATE ROLE ROLE_AGENT_LOCATION;
 

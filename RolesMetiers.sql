@@ -1,3 +1,16 @@
+/* =====================================================================
+   MEMBRE 3 : ROLES METIERS & LIMITE DES ROLES DANS LES VUES
+   Proprietaire des tables : SAKILA
+   Pre-requis : les utilisateurs STAFF_MIKE, MANAGER1 et SAKILA_ADMIN
+                existent deja (crees par un autre membre du groupe).
+   Objectif   : regrouper les droits par metier avec des roles, puis
+                montrer pourquoi un role ne permet pas de creer une vue.
+   ===================================================================== */
+
+
+/* =====================================================================
+   PARTIE 1 : CREATION DES ROLES
+   ===================================================================== */
 
 -- Role des caissiers : operations quotidiennes au comptoir
 CREATE ROLE ROLE_AGENT_LOCATION;
@@ -62,6 +75,9 @@ SELECT * FROM SESSION_PRIVS;
 
 -- Le SELECT fonctionne grace au role
 SELECT COUNT(*) FROM SAKILA.FILM;
+
+-- 1. Table non accordée au rôle : ORA-00942 (table ou vue inexistante)
+SELECT * FROM SAKILA.ACTOR;
 
 
 /* =====================================================================

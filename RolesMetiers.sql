@@ -1,4 +1,4 @@
-ALTER USER STAFF_MIKE IDENTIFIED BY "Mike#2026" ACCOUNT UNLOCK;
+
 -- Role des caissiers : operations quotidiennes au comptoir
 CREATE ROLE ROLE_AGENT_LOCATION;
 
@@ -53,7 +53,7 @@ REVOKE CREATE SESSION FROM STAFF_MIKE;
    PARTIE 4 : VERIFICATION DES PRIVILEGES DE SESSION
    Connexion : staff_mike
    ===================================================================== */
-
+ALTER USER STAFF_MIKE IDENTIFIED BY "Mike#2026" ACCOUNT UNLOCK;
 -- Roles actifs dans la session : doit afficher ROLE_AGENT_LOCATION
 SELECT * FROM SESSION_ROLES;
 
